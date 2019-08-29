@@ -1,13 +1,17 @@
 /* colores */
-object rojo { method esFuerte() { return true } }
-object verde {  }  // completar
-object celeste {  }  // completar
-object pardo {  }  // completar
+object rojo 	{ method esFuerte() {return true } }
+object verde    { method esFuerte() {return true } }
+object celeste  { method esFuerte() {return false} }
+object pardo 	{ method esFuerte() {return false} }  
 
 /* materiales */
-object lino { method brilla() { return false } }
-object vidrio { method brilla() { return true } }
-// agregar: cobre, madera, cuero
+object lino   {method brilla() {return false} }
+object vidrio {method brilla() {return true } }
+object cobre  {method brilla() {return true	} }
+object madera {method brilla() {return false} }
+object cuero  {method brilla() {return false} }
+
+
 
 /* objetos */
 object remera {
@@ -17,9 +21,10 @@ object remera {
 }
 
 object pelota {
-	method color() {  }  // completar
-	method material() {  }  // completar
-	method peso() {  }  // completar
+	
+	method color() { return pardo }  // retorna el color de la pelota.
+	method material() { return cuero }  // retorna el material de la pelota.
+	method peso() { return 1300}  // retrna el peso de la variable pelota.
 }
 
 object munieco {
@@ -31,5 +36,23 @@ object munieco {
 	method peso(pesoNuevo) { peso = pesoNuevo }
 }
 
-// agregar biblioteca y placa
+object biblioteca {
+		
+	method color() {return verde}
+	method material() {return madera}
+	method peso() {return 8000}
+			
+}
+object placa {
+	var color
+	var peso
+	method color() {return color}
+	method nuevoColor(colorNuevo) {color = colorNuevo}
+	method peso() {return peso}
+	method pesoNuevo(nuevoPeso) {peso = nuevoPeso}
+	method material() {return cobre}
+}
+
+
+
 
